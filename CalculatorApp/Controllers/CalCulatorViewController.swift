@@ -59,8 +59,10 @@ class CalCulatorViewController: UIViewController {
         case 1: //階乘
             result = 1
             if let factorialNum = Int(numberLabel.text!) {
-                for num in 1...factorialNum {
-                    result *= num
+                if factorialNum != 0 {
+                    for num in 1...factorialNum {
+                        result *= num
+                    }
                 }
             }
             numberLabel.text = String(result)
